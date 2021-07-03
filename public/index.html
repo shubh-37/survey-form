@@ -1,0 +1,115 @@
+<!--A well-made survey form can help you acquire relevant information about your target audiences like their demographic age,
+ job, location, taste and preference, and pain points. You need to acquaint yourself with the basic tags/input fields in HTML required to design forms. 
+Then you can use the tags to create a text field, checkbox, radio button, date, and other vital elements contained in a form. 
+Again, you can always use CSS to impart a better look and feel to your form and webpage-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+
+    <div class="box">
+        <h2 style="text-align: center;">Survey Form</h2>
+        <form name="myForm">
+            <h4 class="question"> &nbsp;Enter your name: </h4><input type="text" name="Name" size="30"
+                maxlength="25" placeholder="Full Name"><br>
+
+            <h4 class="question"> &nbsp;Please select your age group:</h4>
+            <input type="radio" name="ques1" value="Under 18"> Under 18<br>
+            <input type="radio" name="ques1" value="18-24"> 18-24<br>
+            <input type="radio" name="ques1" value="25-34"> 25-34<br>
+            <input type="radio" name="ques1" value="35-44"> 35-44<br>
+            <input type="radio" name="ques1" value="45-54"> 45-54<br>
+            <input type="radio" name="ques1" value="55-64"> 55-64<br>
+            <input type="radio" name="ques1" value="Above 64"> Above 64<br>
+            <input type="radio" name="ques1" value="Prefer not to Answer"> Prefer not to Answer<br><br>
+
+            <h4 class="question"> &nbsp;What gender do you identify as?</h4>
+            <input type="radio" name="ques2" value="Female"> Female<br>
+            <input type="radio" name="ques2" value="Male"> Male<br>
+            <input type="radio" name="ques2" value="other"> Other<br>
+            <input type="radio" name="ques2" value="Prefer not to Answer"> Prefer not to Answer<br><br>
+
+            <h4 class="question">&nbsp; Where is your home located?</h4>
+            <input type="radio" name="ques3" value="North America/Central America"> North America/Central America<br>
+            <input type="radio" name="ques3" value="South America"> South America<br>
+            <input type="radio" name="ques3" value="Europe"> Europe<br>
+            <input type="radio" name="ques3" value="Africa"> Africa<br>
+            <input type="radio" name="ques3" value="Asia"> Asia<br>
+            <input type="radio" name="ques3" value="Australia"> Australia<br>
+            <input type="radio" name="ques3" value="Caribbean Islands"> Caribbean Islands<br>
+            <input type="radio" name="ques3" value="Pacific Islands"> Pacific Islands<br>
+            <!-- &nbsp;Other: <input type="text" name="ques3" value="Other location"><br> -->
+            <input type="radio" name="ques3" value="Prefer not to Answer"> Prefer not to say<br><br>
+
+            <h4 class="question">&nbsp;Are you married?</h4>
+
+            <input type="radio" name="ques4" value="Yes"> Yes<br>
+            <input type="radio" name="ques4" value="No"> No<br>
+            <input type="radio" name="ques4" value="Prefer not to Answer"> Prefer not to say<br><br>
+
+            <h4 class="question">&nbsp;What is the highest degree or level of education you have completed?</h4>
+
+            <input type="radio" name="ques5" value="Some High School"> Some High School<br>
+            <input type="radio" name="ques5" value="High School"> High School<br>
+            <input type="radio" name="ques5" value="Bachelor's Degree"> Bachelor's Degree<br>
+            <input type="radio" name="ques5" value="Master's Degree"> Master's Degree<br>
+            <input type="radio" name="ques5" value="Ph.D. or higher"> Ph.D. or higher<br>
+            <input type="radio" name="ques5" value="Trade School"> Trade School<br>
+            <input type="radio" name="ques5" value="Prefer not to Answer"> Prefer not to say<br><br>
+
+            <h4 class="question">&nbsp;What is your current employment status?</h4>
+
+            <input type="radio" name="ques6" value="Employed Full-Time"> Employed Full-Time<br>
+            <input type="radio" name="ques6" value="Employed Part-Time"> Employed Part-Time<br>
+            <input type="radio" name="ques6" value="Seeking opportunities"> Seeking opportunities<br>
+            <input type="radio" name="ques6" value="Retired"> Retired<br>
+            <input type="radio" name="ques6" value="Prefer not to Answer"> Prefer not to say<br><br>
+
+            <h4 class="question">&nbsp; What is your annual household income?</h4>
+
+            <input type="radio" name="ques7" value="Less than Rs 50,000"> Less than Rs 50,000<br>
+            <input type="radio" name="ques7" value="Rs 50,000 - Rs 1,00,000"> Rs 50,000 - Rs 1,00,000<br>
+            <input type="radio" name="ques7" value="Rs 1,00,000 - Rs 5,00,000"> Rs 1,00,000 - Rs 5,00,000<br>
+            <input type="radio" name="ques7" value="Rs 5,00,000 - Rs 10,00,000"> Rs 5,00,000 - Rs 10,00,000<br>
+            <input type="radio" name="ques7" value="More than Rs 10,00,000"> More than Rs 10,00,000<br>
+            <input type="radio" name="ques7" value="Prefer not to Answer"> Prefer not to say<br><br>
+
+            <h4 class="question">&nbsp; If applicable, please specify your religion:</h4>
+
+            <input type="radio" name="ques8" value="Catholicism/Christianity"> Catholicism/Christianity<br>
+            <input type="radio" name="ques8" value="Judaism"> Judaism<br>
+            <input type="radio" name="ques8" value="Islam"> Islam<br>
+            <input type="radio" name="ques8" value="Buddhism"> Buddhism<br>
+            <input type="radio" name="ques8" value="Hinduism"> Hinduism<br>
+            <!-- &nbsp;Other: <input type="text" name="ques8" value="other religion"><br> -->
+            <input type="radio" name="ques8" value="Prefer not to Answer"> Prefer not to say<br><br>
+
+            <h4 class="question">&nbsp; Which languages are you capable of speaking fluently? (Check all that apply):
+            </h4>
+
+            <input type="checkbox" class="language" name="option" value="English"> English<br>
+            <input type="checkbox" class="language" name="option" value=" Spanish"> Spanish<br>
+            <input type="checkbox" class="language" name="option" value="Portuguese"> Portuguese<br>
+            <input type="checkbox" class="language" name="option" value="French"> French<br>
+            <input type="checkbox" class="language" name="option" value="Mandarin"> Mandarin<br>
+            <input type="checkbox" class="language" name="option" value="Arabic"> Arabic<br>
+            <input type="checkbox" class="language" name="option" value="Other language"> Other<br>
+            <input type="checkbox" class="language" name="option" value="Prefer not to Answer"> Prefer not to say<br><br>
+            &nbsp;
+            <div class="finalButtons">
+                <button class="submitButton" value="submit" type="submit" onclick="submitForm(event)">Submit</button>
+                <button class="submitButton" type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+<script src="/index.js"></script>    
+
+</body>
+
+</html>
