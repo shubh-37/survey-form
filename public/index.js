@@ -61,18 +61,6 @@ function submitForm(e) {
     }
   }
   const religion = document.querySelector('input[name="ques8"]:checked').value;
-  console.log({
-    name,
-    age,
-    gender,
-    homeLocation,
-    maritalStatus,
-    employment,
-    income,
-    education,
-    language,
-    religion,
-  });
   fetch("/submitForm", {
     method: "POST",
     headers: {
