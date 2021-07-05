@@ -69,8 +69,6 @@ const sequelize = new Sequelize(database, user, password, {
 	{ sequelize, modelName: 'surveyform' }
   );
 
-  console.log(SurveyForm === sequelize.models.surveyform); // true  
-
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
