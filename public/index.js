@@ -1,4 +1,4 @@
-function validateForm() {
+function validateForm() {                        //This is a function to check if every question has been answer by the user
   let x = document.forms["myForm"]["Name"].value;
   if (x == "") {
     alert("Name must be filled out");
@@ -34,7 +34,7 @@ function validateForm() {
   return true;
 }
 
-function submitForm(e) {
+function submitForm(e) {               //this function stores the input value in every variable declared
   e.preventDefault();
   if (!validateForm()) {
     return;
@@ -61,12 +61,12 @@ function submitForm(e) {
     }
   }
   const religion = document.querySelector('input[name="ques8"]:checked').value;
-  fetch("/submitForm", {
+  fetch("/submitForm", {       //after every question has been answered this keyword fetches submitForm to send the answers to the server
     method: "POST",
     headers: {
         'Content-Type': 'application/json'
     },
-    body: JSON.stringify({
+    body: JSON.stringify({     //all the values stored in the variables are sent in the form string through json
       name,
       age,
       gender,
@@ -78,7 +78,7 @@ function submitForm(e) {
       language,
       religion,
     }),
-  }).then(response => response.json()).then(response => {
+  }).then(response => response.json()).then(response => {  //after the values are sent to the server this keyword helps to open the submit.html file
      window.location = 'http://localhost:3000/submit.html';
   });
  
