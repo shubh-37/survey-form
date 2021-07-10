@@ -15,37 +15,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static("public"));
 
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
-
-app.post("/submitForm", async function (req, res) {
-  const {
-    name,
-    age,
-    gender,
-    homeLocation,
-    maritalStatus,
-    education,
-    employment,
-    income,
-    religion,
-    language,
-  } = req.body;
-  const surveyInstance = await db.sequelize.models.surveyform.create({
-    name,
-    age,
-    gender,
-    homeLocation,
-    maritalStatus,
-    education,
-    employment,
-    income,
-    religion,
-    language,
-  });
-  console.log(surveyInstance);
-  return res.send({ message: "Successfully Saved" });
+app.post('/submitForm', async function(req, res){
+    const { name, age,gender,homeLocation, maritalStatus,education, employment, income, religion, language } = req.body
+    const surveyInstance = await db.sequelize.models.surveyform.create({name, age,gender,homeLocation, maritalStatus,education, employment, income, religion, language});
+    console.log(surveyInstance);
+    return res.send({message: 'Successfully Saved'});
 });
 
 init();
